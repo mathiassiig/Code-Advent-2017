@@ -11,8 +11,8 @@ namespace CalendarCSharp
     {
         static void Main(string[] args)
         {
-            var dayOne = new D1C2();
-            Console.WriteLine(dayOne.Output());
+            var dayTwo = new D2C1();
+            Console.WriteLine(dayTwo.Output());
         }
     }
 }
