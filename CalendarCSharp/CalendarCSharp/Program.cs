@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CalendarCSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var dayOne = new D1C1();
+            Console.WriteLine(dayOne.Output());
+        }
+    }
+}
