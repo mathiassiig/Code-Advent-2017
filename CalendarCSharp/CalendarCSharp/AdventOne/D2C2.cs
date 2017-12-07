@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CalendarCSharp.AdventOne
 {
-    public class D2C1
+    public class D2C2
     {
         private int[,] _table;
         private const string _filename = "d2_input.txt";
@@ -18,10 +18,20 @@ namespace CalendarCSharp.AdventOne
             foreach (var r in rows)
             {
                 var asNumbers = r.Split('\t').Select(x => Convert.ToInt32(x)).ToList();
-                var biggest = asNumbers.Max(x => x);
-                var smallest = asNumbers.Min(x => x);
-                var diff = biggest - smallest;
-                total += diff;
+                for (int i = 0; i < asNumbers.Count; i++)
+                {
+                    for (int j = 0; j < asNumbers.Count; j++)
+                    {
+                        if (i != j)
+                        {
+                            var division = asNumbers[i] / (double)asNumbers[j];
+                            if (division % 1 == 0)
+                            {
+                                total += (int)division;
+                            }
+                        }
+                    }
+                }
             }
             return total;
         }
