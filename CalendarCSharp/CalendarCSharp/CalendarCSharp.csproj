@@ -52,6 +52,7 @@
     <Compile Include="AdventOne\D4C1.cs" />
     <Compile Include="AdventOne\D4C2.cs" />
     <Compile Include="AdventOne\D5C1.cs" />
+    <Compile Include="AdventOne\D5C2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
