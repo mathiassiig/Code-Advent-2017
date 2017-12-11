@@ -11,7 +11,7 @@ namespace CalendarCSharp
     {
         static void Main(string[] args)
         {
-            var dayTwo = new D3C2();
+            var dayTwo = new D4C1();
             Console.WriteLine(dayTwo.Output());
         }
     }
