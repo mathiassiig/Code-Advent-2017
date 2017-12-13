@@ -75,14 +75,14 @@ namespace CalendarCSharp.AdventOne
                     results.Add(new CalculationResult(i, weight));
                     i++;
                 }
-                var weirdo = results.GroupBy(x => x.weight).Where(x => x.Count() == 1).SelectMany(x => x).FirstOrDefault();
-                if(weirdo == null)
+                var unique = results.GroupBy(x => x.weight).Where(x => x.Count() == 1).SelectMany(x => x).FirstOrDefault();
+                if(unique == null)
                 {
                     return pivot;
                 }
                 else
                 {
-                    pivot = pivot.Children[weirdo.index];
+                    pivot = pivot.Children[unique.index];
                 }
             }
         }
