@@ -11,6 +11,7 @@ namespace CalendarCSharp.AdventOne
         public class Disc
         {
             public string Name;
+            public int Weight;
             public List<Disc> Children = new List<Disc>();
             public Disc Parent = null;
             public void AddChild(Disc child)
@@ -53,12 +54,12 @@ namespace CalendarCSharp.AdventOne
             {
                 var allWords = line.Split(' ');
                 var name = allWords[0];
-                var weight = allWords[1]; // worthless info?
+                var weight = Convert.ToInt32(allWords[1].Replace("(", "").Replace(")", ""));
                 Disc disc = null;
                 discs.TryGetValue(name, out disc);
                 if (disc == null)
                 {
-                    disc = new Disc() { Name = name };
+                    disc = new Disc() { Name = name, Weight = weight };
                     discs.Add(name, disc);
                 }
                 // has children:
