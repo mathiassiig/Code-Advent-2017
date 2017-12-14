@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CalendarCSharp.AdventOne;
+using CalendarCSharp.AdventTwo;
 
 namespace CalendarCSharp
 {
@@ -11,7 +12,7 @@ namespace CalendarCSharp
     {
         static void Main(string[] args)
         {
-            var day = new D7C2();
+            var day = new D8C1();
             Console.WriteLine(day.Output());
         }
     }
