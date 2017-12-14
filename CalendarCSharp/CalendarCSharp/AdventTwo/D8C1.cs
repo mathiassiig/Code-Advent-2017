@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalendarCSharp.AdventTwo
 {
-    public class D8C2
+    public class D8C1
     {
         private int ConvertToIncDec(string incDec)
         {
@@ -33,10 +33,9 @@ namespace CalendarCSharp.AdventTwo
 
         public int Output()
         {
-            int highestValue = int.MinValue;
             var allText = System.IO.File.ReadAllText(System.IO.Path.Combine(Environment.CurrentDirectory, "d8_input.txt"));
             var allLines = allText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-            foreach (var line in allLines)
+            foreach(var line in allLines)
             {
                 var instructions = line.Split(' ');
 
@@ -56,18 +55,13 @@ namespace CalendarCSharp.AdventTwo
                     var modifiedRegisterValue = GetRegisterValue(modifiedRegister);
                     _registers[modifiedRegister] = modifiedRegisterValue + incDecFinalAmount;
                 }
-                var highest = _registers.Max(x => x.Value);
-                if(highest > highestValue)
-                {
-                    highestValue = highest;
-                }
             }
-            return highestValue;
+            return _registers.Max(x => x.Value);
         }
 
         private int GetRegisterValue(string registerName)
         {
-            if (_registers.ContainsKey(registerName))
+            if(_registers.ContainsKey(registerName))
             {
                 return _registers[registerName];
             }
