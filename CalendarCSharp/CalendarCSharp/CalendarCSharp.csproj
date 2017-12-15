@@ -60,6 +60,7 @@
     <Compile Include="AdventTwo\D8C1.cs" />
     <Compile Include="AdventTwo\D8C2.cs" />
     <Compile Include="AdventTwo\D9C1.cs" />
+    <Compile Include="AdventTwo\D9C2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
