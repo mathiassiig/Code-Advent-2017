@@ -65,6 +65,7 @@
     <Compile Include="AdventTwo\D12C1.cs" />
     <Compile Include="AdventTwo\D12C2.cs" />
     <Compile Include="AdventTwo\D13C1.cs" />
+    <Compile Include="AdventTwo\D13C2.cs" />
     <Compile Include="AdventTwo\D8C1.cs" />
     <Compile Include="AdventTwo\D8C2.cs" />
     <Compile Include="AdventTwo\D9C1.cs" />
